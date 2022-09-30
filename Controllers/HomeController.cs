@@ -7,7 +7,7 @@ namespace MyCourse.Controllers
         /* Action to display the courses list */
         public IActionResult Index()
         {
-            return Content("I am the Index of the home page");
+            return View();
         }
     }
 }
