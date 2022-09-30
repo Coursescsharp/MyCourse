@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.IO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace MyCourse
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
         {
             if (env.IsEnvironment("Development"))
             {
