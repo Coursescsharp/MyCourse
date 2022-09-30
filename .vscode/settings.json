@@ -1,8 +1,0 @@
-{
-    "emmet.includeLanguages": { "aspnetcorerazor": "html"},
-    "browserSync.config": {
-        "proxy": "localhost:5001",
-        "files": ["Views/**/*.cshtml", "wwwroot/**/*"],
-        "browser" : ["chrome"]
-    }
-}
