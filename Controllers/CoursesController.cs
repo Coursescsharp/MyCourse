@@ -11,9 +11,9 @@ namespace MyCourse.Controllers
         }
 
         /* Action to display a course detail */
-        public IActionResult Detail(string courseId)
+        public IActionResult Detail(string id)
         {
-            return Content($"I am Detail and I received the id {courseId}");
+            return Content($"I am Detail and I received the id {id}");
         }
     }
 }
