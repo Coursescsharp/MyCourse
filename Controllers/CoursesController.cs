@@ -15,5 +15,11 @@ namespace MyCourse.Controllers
         {
             return Content($"I am Detail and I received the id {id}");
         }
+
+        /* To search courses based on a title */
+        public IActionResult Search(string title)
+        {
+            return Content($"I am Search and I received the string {title}");
+        }
     }
 }
