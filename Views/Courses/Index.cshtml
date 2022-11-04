@@ -1,13 +1,16 @@
+@model List<CourseViewModel>
+
 <h1>Courses Catalog</h1>
-@for(int i = 1; i <= 10; i++)
+
+@foreach(CourseViewModel course in Model)
 {
     <div class="row course">
         <div class="col-md-1">
-            <img src="~/logo.svg" width="50">
+            <img src="@course.ImagePath" width="50">
         </div>
         <div class="col-md-5">
-            <h2>Course title</h2>
-            <author>Author name</author>
+            <h2>@course.Title</h2>
+            <author>@course.Author</author>
         </div>
         <div class="col-md-2 rating">
             <i class="fa fa-star" aria-hidden="true"></i>
@@ -17,7 +20,7 @@
             <i class="fa fa-star" aria-hidden="true"></i>
         </div>
         <div class="col-md-2 price">
-            EUR 10,99<br/><s>EUR 12,99</s>
+            @course.CurrentPrice<br/><s>@course.FullPrice</s>
         </div>
         <div class="col-md-2 d-flex align-items-center">
             <a class="btn btn-outline-primary" asp-action="Detail" asp-route-id="5">Course details</a>
