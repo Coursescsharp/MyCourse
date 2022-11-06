@@ -1,1 +1,57 @@
-<h1>I am the Detail view for the CoursesController'Detail action</h1>
+<section class="course-info">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>Course title</h1>
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+            <a href="#" class="btn btn-warning btn-lg btn-block subscribe-course">Subscribe</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem in id eveniet. Delectus placeat aspernatur omnis veritatis, consectetur dolorum repellendus illum minima id fugit perspiciatis quis tempore unde. Accusantium, est.</p>
+            <p>Distinctio quisquam ut nulla vero, tempore harum? Dignissimos delectus nisi amet eius, dolorem quas voluptates nam minus in, voluptas laboriosam expedita ex consequatur asperiores, temporibus inventore rerum. Beatae, at sit.</p>
+            <p>Quia ullam error nemo nisi possimus eum distinctio quibusdam autem aspernatur consequatur dicta laborum nihil commodi aperiam quis in minima veritatis impedit assumenda, expedita maiores porro? Magnam neque itaque non?</p>
+            <p>Magnam soluta modi aperiam unde, ad fugiat? Commodi reiciendis quibusdam et eos delectus alias labore quod, asperiores veritatis quis cupiditate ipsum maxime autem repellat necessitatibus accusantium quo repudiandae saepe. Placeat.</p>
+        </div>
+        <div class="col-md-3">
+            <aside>
+                <author>from Author name</author>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="price">EUR 10,99</div>
+                <img src="~/logo.svg" class="img-fluid course-image" alt="">
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="course-lessons">
+    <h2>Lessons</h2>
+    @for(int i = 1; i <= 10; i++)
+    {
+        <hr>
+        <div class="row">
+            <div class="col-md-9 d-flex align-items-center">
+                <a href="#">Lesson title</a>
+            </div>
+            <div class="col-md-3 d-flex align-items-center lesson-duration">
+                <i class="fa fa-clock" aria-hidden="true"></i><time>1m 30s</time>
+            </div>
+        </div>
+    }
+    <hr>
+    <div class="row course-duration">
+        <div class="col-md-9 d-flex align-items-center">
+            Total
+        </div>
+        <div class="col-md-3 d-flex align-items-center">
+            <i class="fa fa-clock" aria-hidden="true"></i><time>15m 30s</time>
+        </div>
+    </div>
+</section>
