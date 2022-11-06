@@ -25,6 +25,13 @@ namespace MyCourse
             if (env.IsEnvironment("Development"))
             {
                 app.UseDeveloperExceptionPage();
+
+                //Aggiorniamo un file per notificare al BrowserSync che deve aggiornare la pagina
+                lifetime.ApplicationStarted.Register(() =>
+                {
+                    string filePath = Path.Combine(env.ContentRootPath, "bin/reload.txt");
+                    File.WriteAllText(filePath, DateTime.Now.ToString());
+                });
             }
 
             app.UseStaticFiles();

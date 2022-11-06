@@ -12,6 +12,7 @@ namespace MyCourse.Controllers
         /* Action to display the courses list */
         public IActionResult Index()
         {
+            ViewData["Title"] = "Courses catalog!!!";
             List<CourseViewModel> courses = this.courseService.GetCourses();
 
             return View(courses);
@@ -21,6 +22,7 @@ namespace MyCourse.Controllers
         public IActionResult Detail(int id)
         {
             CourseDetailViewModel course = this.courseService.GetCourse(id);
+            ViewData["Title"] = course.Title;
 
             return View(course);
         }
