@@ -18,9 +18,11 @@ namespace MyCourse.Controllers
         }
 
         /* Action to display a course detail */
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
-            return View();
+            CourseDetailViewModel course = this.courseService.GetCourse(id);
+
+            return View(course);
         }
 
         /* To search courses based on a title */
